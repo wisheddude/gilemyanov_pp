@@ -14,16 +14,16 @@
 ])
 
 <body class="min-h-screen flex flex-col">
-<header class="w-full">
-    @include('includes.header')
-</header>
+    <header class="w-full">
+        @include('includes.header')
+    </header>
 
-<main class="flex-1 flex items-center justify-center py-6">
-    @yield('main')
-</main>
+    <main class="flex-1 flex items-center justify-center py-6">
+        @yield('main')
+    </main>
 
-<footer class="w-full">
-    @include('includes.footer')
-</footer>
+    <footer class="w-full">
+        @include('includes.footer')
+    </footer>
 </body>
 </html>
