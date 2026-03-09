@@ -1,3 +1,7 @@
-<div>
-    <!-- Simplicity is the ultimate sophistication. - Leonardo da Vinci -->
-</div>
+@extends('layouts.app')
+
+@section('Авторизация', 'title')
+
+@section('main')
+
+@endsection
