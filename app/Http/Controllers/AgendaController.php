@@ -40,7 +40,7 @@ class AgendaController extends Controller
 
         $validated = $request->validate([
            'title' => 'required|string|max:255',
-           'description' => 'nullabel|string',
+           'description' => 'nullable|string',
            'agenda_date' => 'required|date',
            'location' => 'nullable|string|max:255',
         ]);
