@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('agendas', function (Blueprint $table) {
-            //
+            $table->foreignId('created_by')->constrained('users');
         });
     }
 
@@ -22,7 +22,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('agendas', function (Blueprint $table) {
-            //
+            $table->dropForeign(['created_by']);
+            $table->dropColumn(['created_by']);
         });
     }
 };
