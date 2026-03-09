@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Agenda;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +14,11 @@ class AgendaSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $users = User::all();
+
+        Agenda::factory(20)->make()->each(function ($agenda) use ($users) {
+            $agenda->created_by = $users->random()->id;
+            $agenda->save();
+        });
     }
 }
