@@ -16,7 +16,7 @@ class AgendaSeeder extends Seeder
     {
         $users = User::all();
 
-        Agenda::factory(20)->make()->each(function ($agenda) use ($users) {
+        Agenda::factory(60)->make()->each(function ($agenda) use ($users) {
             $agenda->created_by = $users->random()->id;
             $agenda->save();
         });
